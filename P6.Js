@@ -68,10 +68,6 @@ function promedio(){
     let prom = 0;
     let etiquetaPromedio = document.getElementById("etiquetaPromedio");
 
-    let nameUno =document.getElementById("name");
-
-    let lista=document.getElementById("listaUno");
-
     let nombre = document.getElementById("t1").value;
 
 
@@ -106,4 +102,94 @@ function promedio(){
 
     
 }
+}
+function alta(){ 
+
+    let notaAlta = 0;
+    let i = 0;
+    let etiquetaAlta = document.getElementById("etiquetaAlta");
+
+    let nombre = document.getElementById("t1").value;
+
+
+
+    if (nombre=="Jonathan"){
+
+        let miArray = [10, 5, 6];
+        while (i<5){
+
+            if(miArray[i]>notaAlta){
+                notaAlta = miArray[i]
+            }
+            i++;
+    
+        }
+        etiquetaAlta.textContent=notaAlta;
+
+       
+    
+    }else if(nombre=="Carlos") {
+
+        let miArray = [8, 9, 4];
+        while (i<5){
+
+            if(miArray[i]>notaAlta){
+                notaAlta = miArray[i]
+            }
+            i++;
+    
+        }
+        etiquetaAlta.textContent=notaAlta;
+
+      
+        }else{
+        document.getElementById("t1").value = "";
+        nombre.value = "";
+        alert("ingrese un nombre correcto");
+        
+
+}
+}
+function aplazos(){
+
+    let nombre = document.getElementById("t1").value;
+    let etiquetaAplazo = document.getElementById("aplazos");
+    let aplazo = "No";
+    let i = 0;
+
+    if (nombre=="Jonathan"){
+
+        let miArray = [10, 5, 6];
+       do{
+         if (miArray[i]<4){
+            aplazo="Si";
+            break;}
+            i++
+       }while(i<5);
+       
+        etiquetaAplazo.textContent=aplazo;
+
+       
+    
+    }else if(nombre=="Carlos") {
+
+        let miArray = [8, 9, 4];
+        do{
+            if (miArray[i]<=4){
+               aplazo="Si";
+               break;}
+               i++
+          }while(i<5);
+          
+           etiquetaAplazo.textContent=aplazo;
+
+      
+        }else{
+        document.getElementById("t1").value = "";
+        nombre.value = "";
+        alert("ingrese un nombre correcto");
+        
+
+}
+
 }
